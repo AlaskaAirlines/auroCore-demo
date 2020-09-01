@@ -11,6 +11,7 @@
     <script type="module">
       import '@polymer/iron-demo-helpers/demo-pages-shared-styles';
       import '@polymer/iron-demo-helpers/demo-snippet';
+      import '@alaskaairux/auro-button';
     </script>
     <script type="module" src="../src/auro-demo.js"></script>
     <custom-style>
@@ -25,7 +26,29 @@
 
       <demo-snippet>
         <template>
-          <auro-demo cssClass="testClass">Hello World!</auro-demo>
+          <auro-demo header="Primary">
+            <auro-button>Button label</auro-button>
+          </auro-demo>
+        </template>
+      </demo-snippet>
+
+      <demo-snippet>
+        <template>
+          <auro-demo header="Primary + Icon">
+            <auro-button id="svgLeftButton">Button label</auro-button>
+            <script type="module">
+              import externalLink from '../node_modules/@alaskaairux/icons/dist/icons/interface/external-link_es6.js';
+              document.getElementById("svgLeftButton").svgIconLeft = externalLink.svg;
+            </script>
+          </auro-demo>
+        </template>
+      </demo-snippet>
+
+      <demo-snippet>
+        <template>
+          <auro-demo header="Secondary">
+            <auro-button>Button label</auro-button>
+          </auro-demo>
         </template>
       </demo-snippet>
     </div>
