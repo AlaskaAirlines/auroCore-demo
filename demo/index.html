@@ -12,6 +12,8 @@
       import '@polymer/iron-demo-helpers/demo-pages-shared-styles';
       import '@polymer/iron-demo-helpers/demo-snippet';
       import '@alaskaairux/auro-button';
+      import '@alaskaairux/auro-alerts';
+      import '@alaskaairux/auro-header';
     </script>
     <script type="module" src="../src/auro-demo.js"></script>
     <custom-style>
@@ -23,34 +25,28 @@
   <body>
     <div class="vertical-section-container">
       <h1>auro-demo</h1>
+      <auro-demo
+        variations='["primary", "secondary", "tertiary"]'
+        behaviors='["disabled", "svgIconLeft", "svgIconRight", "fluid"]'
+        darkMode
+        allowIconChange
+        allowTextChange
+        icon='interface/external-link'
+      >
+        <auro-button>Button label</auro-button>
+      </auro-demo>
 
-      <demo-snippet>
-        <template>
-          <auro-demo header="Primary">
-            <auro-button>Button label</auro-button>
-          </auro-demo>
-        </template>
-      </demo-snippet>
+      <auro-demo
+        variations='["default", "error", "warning", "information"]'
+        behaviors='["hidden", "hiddenVisually", "hiddenAudible"]'
+        allowTextChange
+      >
+        <auro-alerts>Demo Alert</auro-alerts>
+      </auro-demo>
 
-      <demo-snippet>
-        <template>
-          <auro-demo header="Primary + Icon">
-            <auro-button id="svgLeftButton">Button label</auro-button>
-            <script type="module">
-              import externalLink from '../node_modules/@alaskaairux/icons/dist/icons/interface/external-link_es6.js';
-              document.getElementById("svgLeftButton").svgIconLeft = externalLink.svg;
-            </script>
-          </auro-demo>
-        </template>
-      </demo-snippet>
-
-      <demo-snippet>
-        <template>
-          <auro-demo header="Secondary">
-            <auro-button>Button label</auro-button>
-          </auro-demo>
-        </template>
-      </demo-snippet>
+      <auro-demo>
+        <auro-header>Header Sample Text</auro-header>
+      </auro-demo>
     </div>
   </body>
 </html>

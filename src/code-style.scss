@@ -1,0 +1,18 @@
+// Copyright (c) 2020 Alaska Airlines. All right reserved. Licensed under the Apache-2.0 license
+// See LICENSE in the project root for license information.
+
+// ---------------------------------------------------------------------
+
+// Import Auro tokens
+@import "./node_modules/@alaskaairux/orion-design-tokens/dist/tokens/SCSSVariables";
+@import "./node_modules/@alaskaairux/orion-design-tokens/dist/tokens/SassCustomProperties";
+
+@import "./node_modules/@alaskaairux/orion-web-core-style-sheets/dist/breakpoints";
+@import "./node_modules/@alaskaairux/orion-web-core-style-sheets/dist/core";
+
+// Support for auroElement styles
+// @import "./node_modules/@alaskaairux/orion-web-core-style-sheets/dist/auroElement/auroElement";
+
+#hide {
+  display: none !important;
+}

@@ -13,23 +13,72 @@
 // Support for auroElement styles
 // @import "./node_modules/@alaskaairux/orion-web-core-style-sheets/dist/auroElement/auroElement";
 
+
 // container styles - defines the look of the outer custom component
-// :host {
-//   ...
-// }
+:host {
+  display: block;
+
+}
+
+[slot="markdown-html"] {
+  background-color: var(--auro-color-base-gray-100);
+}
 
 // layout styles - define any layout specifications for UI that is contained WITHIN the component
 // never define layout that would cause effect on element outside the scope of this component
 
-
 // component shape styles
-// .auro-demo {
-//   ...
-// }
+.auro-demo {
+  background-color: var(--auro-color-background-lightest);
+  padding: var(--auro-size-md);
+  border: var(--auro-border-width-thick) solid var(--auro-color-border-primary-on-light);
 
-.testClass {
-  color:  var(--auro-color-border-error-on-light);
-  border: 1px solid var(--auro-color-border-error-on-light);
-  display: inline-block;
-  padding: var(--auro-text-body-size-default);
+  &--selections {
+    display: flex;
+
+    .variations {
+      margin: var(--aruo-size-sm);
+    }
+
+    .behaviors {
+      margin: var(--aruo-size-sm);
+    }
+
+    label {
+      width: 100%;
+      color: var(--auro-color-text-secondary-on-light);
+    }
+
+    select, input {
+      width: 100%;
+    }
+  }
+
+  &--panel {
+    display: flex;
+    background-color: var(--auro-color-background-lighter);
+    padding: var(--auro-size-lg);
+
+    ::slotted(*) {
+      margin: auto;
+    }
+
+    &Ondark {
+      background-color: var(--auro-color-background-darkest);
+    }
+  }
+
+  &--toggles {
+    display: flex;
+    margin-top: var(--auro-size-md);
+
+    .codeToggle {
+      align-self: flex-start;
+    }
+
+    .colorToggle {
+      margin-left: auto;
+      align-self: flex-end;
+    }
+  }
 }
